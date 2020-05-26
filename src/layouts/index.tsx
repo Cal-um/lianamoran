@@ -1,13 +1,12 @@
 import React, { FC } from 'react'
-import Header from "./header"
-import { View } from 'react-native'
-  
-const Layout: FC = ({ children }) => {
+import HeaderFooter from "./HeaderFooter"
+import { PageProps } from 'gatsby'
+ 
+const Layout: FC<PageProps> = ({ children, location }) => {
   return (
-      <View style={{flex: 1, flexDirection:"column"}}>
-        <Header />
-          {children}
-      </View>
+        <HeaderFooter compact={location.pathname === "/"}>
+            { children } 
+        </HeaderFooter>
   )
 }
 
