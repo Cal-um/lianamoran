@@ -39,8 +39,6 @@ const Layout: FC<PageProps> = ({ children, location }) => {
   return (
     <TransitionState>
       {(transition: any) => {
-        console.log(transition.transitionStatus)
-        console.log(transition.mount)
         setMount(transition.transitionStatus)
         return (
           <Animated.View style={{ opacity, minHeight: dimensions.height, minWidth: dimensions.width }}>

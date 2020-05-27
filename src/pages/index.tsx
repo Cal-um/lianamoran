@@ -36,8 +36,6 @@ export default (props: any) => {
     imageIndex === (images.length - 1) ? setImageIndex(0) : setImageIndex(imageIndex + 1)
   }
 
-  console.log({dimentions}, "NEW ONES")
-
   return (
     <Layout {...props}>
       <TouchableWithoutFeedback onPress={changeImage} style={{ zIndex: -100 }}>
