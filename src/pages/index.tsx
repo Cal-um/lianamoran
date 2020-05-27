@@ -40,7 +40,7 @@ export default (props: any) => {
 
   return (
     <Layout {...props}>
-      <TouchableWithoutFeedback onPress={changeImage} style={{ zIndex: 100 }}>
+      <TouchableWithoutFeedback onPress={changeImage} style={{ zIndex: -100 }}>
         <Animated.View style={{ opacity, position: "absolute", padding: 16, ...dimentions }}>
           <Image resizeMode="contain" style={{ flex: 1 }} source={require(`../assets/${images[imageIndex].path}`)} />
           <Caption style={{ marginTop: 8, color: "grey" }}>{images[imageIndex].title}</Caption>

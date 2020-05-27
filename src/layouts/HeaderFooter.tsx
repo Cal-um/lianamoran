@@ -39,9 +39,8 @@ const Header:FC<Props> = ({ compact, children }) => {
     }
 
     return (
-        <Fragment>
-            {/* // <View style={{ flexDirection:"column", width:"100%", height:"100%"}}> */}
-                {openMenu ? <Animated.View style={{ backgroundColor: "white", position:"absolute", ...dimentions, opacity, justifyContent:"center", alignContent:"center"}}> 
+            <View style={{ flexDirection:"column", width:"100%", height:"100%"}}>
+                {openMenu ? <Animated.View style={{ backgroundColor: "white", position:"absolute", ...dimentions, opacity, justifyContent:"center", alignContent:"center", zIndex: 99}}> 
                     <View style={{ padding:16, width: "100%", maxWidth:"700", flexDirection:"row", justifyContent:"space-around", alignContent:"center", flexWrap:"wrap", marginTop:"auto", marginBottom:"auto"}}>
                         <TouchableOpacity style={{padding: 16}} onPress={() => navigate("bio")}>
                             <Headline style={{fontStyle:"italic", fontSize:30, letterSpacing: 5}}>BIO</Headline>
@@ -61,7 +60,7 @@ const Header:FC<Props> = ({ compact, children }) => {
                     </View>
                     <Footer/>
                 </Animated.View> : null}
-                <View style={{flexDirection:"row", alignItems:"center", padding:16}}>
+                <View style={{flexDirection:"row", alignItems:"center", padding:16, zIndex:100 }}>
                     <TouchableOpacity style={{ marginRight: 8 }} onPress={toggleOpen}>
                         <Icon name={openButton ? "close" : "menu"} size={30} style={{justifyContent:"center"}}/>
                     </TouchableOpacity>
@@ -70,10 +69,8 @@ const Header:FC<Props> = ({ compact, children }) => {
                     </TouchableOpacity>: null}
                 </View>
                 { children }  
-                </Fragment>    )             
-             {/* </View> */}
-           
-    
+            </View>
+            )
 }
 
 export const Footer = () =>  <Subheading style={{color:"gray", alignSelf:"center", fontSize:8}}>{footerCopy}</Subheading>
