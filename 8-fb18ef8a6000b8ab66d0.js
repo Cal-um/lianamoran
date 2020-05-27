@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[8],{"0Aie":function(e,t,a){"use strict";a.r(t);var n=a("q1tI"),l=a.n(n),i=a("+ego"),c=a("4YbZ"),o=a("jzUF"),r=a("YiaU");t.default=function(e){return l.a.createElement(i.a,e,l.a.createElement(o.a,{style:{flex:1,justifyContent:"center",alignItems:"center"}},l.a.createElement(c.a,null,l.a.createElement("a",{style:{textDecoration:"none"},href:"mailto:liana@lianamoran.com"},l.a.createElement(r.Title,{style:{fontStyle:"italic"}},"LIANA@LIANAMORAN.COM")))))}}}]);
+//# sourceMappingURL=8-fb18ef8a6000b8ab66d0.js.map
