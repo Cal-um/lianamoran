@@ -36,7 +36,7 @@ const Layout: FC<PageProps> = ({ children, location }) => {
     }).start()
   }
 
-  const isCompact = location.pathname === "/" || location.pathname === "/lianamoran"
+  const isCompact = location.pathname === "/" || location.pathname === "/lianamoran/"
 
   return (
     <TransitionState>
