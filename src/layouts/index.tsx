@@ -36,13 +36,15 @@ const Layout: FC<PageProps> = ({ children, location }) => {
     }).start()
   }
 
+  const isCompact = location.pathname === "/" || location.pathname === "/lianamoran"
+
   return (
     <TransitionState>
       {(transition: any) => {
         setMount(transition.transitionStatus)
         return (
           <Animated.View style={{ opacity, minHeight: dimensions.height, minWidth: dimensions.width }}>
-            <HeaderFooter compact={location.pathname === "/"}>
+            <HeaderFooter compact={isCompact}>
               {children}
             </HeaderFooter>
           </Animated.View>)
